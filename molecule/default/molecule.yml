@@ -8,7 +8,7 @@ lint:
   name: yamllint
 platforms:
   - name: pip_${MOLECULE_DISTRO_FAMILY:-debian}_${MOLECULE_DISTRO_NAME:-stretch}
-    image: "amd64/${MOLECULE_DISTRO_FAMILY:-debian}:${MOLECULE_DISTRO_NAME:-stretch}"
+    image: "${MOLECULE_DISTRO_ARCH:-amd64}/${MOLECULE_DISTRO_FAMILY:-debian}:${MOLECULE_DISTRO_NAME:-stretch}"
     privileged: true
 provisioner:
   name: ansible
